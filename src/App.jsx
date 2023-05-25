@@ -17,9 +17,10 @@ function App() {
         })
     }
     return (
-        <div className="App w-screen h-screen">
+        <div className="App w-screen h-screen overflow-hidden">
             {openObject.type === 'cupboard' && <Cupboard resetObject={resetObject}/>}
             <Main setOpenObject={setOpenObject}/>
+            <h1>hello</h1>
         </div>
     )
 }
