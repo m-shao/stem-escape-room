@@ -5,7 +5,7 @@ function Main({setOpenObject}) {
     const handleClick = (e) => {
         setOpenObject({
             'type' : e.currentTarget.id.split('-')[0],
-            'number' : parseInt(e.currentTarget.id.split('-')[1])
+            'number' : parseInt(e.currentTarget.id.split('-')[1]) ? parseInt(e.currentTarget.id.split('-')[1]) : -1
     })
     }
 
@@ -49,7 +49,7 @@ function Main({setOpenObject}) {
                         <rect id="Rectangle 3_4" x="234" y="540" width="131" height="51" fill="white" />
                         <rect id="Rectangle 4_4" x="241.5" y="546.5" width="115" height="38" stroke="#B0B0B0" strokeWidth="3" />
                         <rect id="Rectangle 5_4" x="279" y="564" width="41" height="4" fill="#003E86" />
-                        </g>
+                        </g> 
                     </g>
                     <g id="bottom-cupboard-group-2">
                         <g id="cupboard-4" onClick={handleClick}>
@@ -135,7 +135,7 @@ function Main({setOpenObject}) {
                         </g>
                     </g>
                 </g>
-                <g id="Microscope" onClick={handleClick}>
+                <g id="microscope" onClick={handleClick}>
                     <path id="Polygon 5" d="M747.374 504.544H810.579L816 514.886H741L747.374 504.544Z" fill="#BABABA" />
                     <rect id="Rectangle 39" x="775.789" y="476.809" width="29.8193" height="27.7349" fill="#666666" />
                     <rect id="Rectangle 40" x="750.488" y="473.988" width="55.1205" height="5.641" rx="2.8205" fill="#BABABA" />
@@ -145,7 +145,7 @@ function Main({setOpenObject}) {
                     <rect id="Rectangle 43" width="21.9235" height="3.93877" transform="matrix(0.672208 0.740362 -0.713184 0.700977 801.045 399.715)" fill="#666666" />
                     <rect id="Rectangle 41" width="16.9623" height="49.8153" transform="matrix(0.695475 0.71855 -0.690422 0.723406 797.08 406.554)" fill="#BABABA" />
                 </g>
-                <g id="flaskGroup" onClick={handleClick}>
+                <g id="flask" onClick={handleClick}>
                     <g id="Circle Flask">
                         <ellipse id="Ellipse 8" cx="341.139" cy="485.613" rx="28.8612" ry="28.2508" fill="#D9D9D9" />
                         <rect id="Rectangle 19" x="329.483" y="426.594" width="22.756" height="43.0755" fill="#D9D9D9" />
@@ -157,17 +157,17 @@ function Main({setOpenObject}) {
                         <ellipse id="Bubble12" cx="332.813" cy="493.165" rx="3.33014" ry="3.35653" fill="white" />
                         <ellipse id="Bubble11" cx="352.517" cy="500.158" rx="1.94258" ry="1.95798" fill="white" />
                     </g>
-                </g>
-                <g id="Triangle Flask">
-                    <path id="Polygon 3" d="M295.693 451.907C297.998 447.883 303.801 447.883 306.106 451.907L336.371 504.742C338.662 508.742 335.774 513.724 331.164 513.724H270.635C266.025 513.724 263.137 508.742 265.428 504.742L295.693 451.907Z" fill="#D9D9D9" />
-                    <path id="Polygon 4" d="M294.586 464.947C296.055 462.39 298.924 460.976 301.846 461.368V461.368C304.052 461.665 306 462.957 307.131 464.874L329.55 502.878C329.69 503.115 329.853 503.339 330.035 503.546V503.546C332.517 506.361 330.519 510.787 326.766 510.787H275.845C272.088 510.787 270.009 506.432 272.37 503.511V503.511C272.519 503.327 272.652 503.132 272.77 502.927L294.586 464.947Z" fill="#56B2DB" />
-                    <rect id="Rectangle 16_2" x="289.522" y="424.357" width="22.756" height="43.0755" fill="#D9D9D9" />
-                    <rect id="Rectangle 18_2" x="292.852" y="457.922" width="16.0957" height="11.1884" fill="#56B2DB" />
-                    <rect id="Rectangle 17_2" x="285.636" y="421" width="30.5263" height="7.27249" rx="3" fill="#D9D9D9" />
-                    <ellipse id="Bubble4" cx="291.464" cy="498.76" rx="3.60766" ry="3.35653" fill="white" />
-                    <ellipse id="Bubble3" cx="307.282" cy="493.725" rx="2.77512" ry="2.79711" fill="white" />
-                    <ellipse id="Bubble2" cx="316.718" cy="503.515" rx="2.2201" ry="1.95798" fill="white" />
-                    <ellipse id="Bubble1" cx="298.679" cy="481.138" rx="1.94258" ry="1.95798" fill="white" />
+                    <g id="Triangle Flask">
+                        <path id="Polygon 3" d="M295.693 451.907C297.998 447.883 303.801 447.883 306.106 451.907L336.371 504.742C338.662 508.742 335.774 513.724 331.164 513.724H270.635C266.025 513.724 263.137 508.742 265.428 504.742L295.693 451.907Z" fill="#D9D9D9" />
+                        <path id="Polygon 4" d="M294.586 464.947C296.055 462.39 298.924 460.976 301.846 461.368V461.368C304.052 461.665 306 462.957 307.131 464.874L329.55 502.878C329.69 503.115 329.853 503.339 330.035 503.546V503.546C332.517 506.361 330.519 510.787 326.766 510.787H275.845C272.088 510.787 270.009 506.432 272.37 503.511V503.511C272.519 503.327 272.652 503.132 272.77 502.927L294.586 464.947Z" fill="#56B2DB" />
+                        <rect id="Rectangle 16_2" x="289.522" y="424.357" width="22.756" height="43.0755" fill="#D9D9D9" />
+                        <rect id="Rectangle 18_2" x="292.852" y="457.922" width="16.0957" height="11.1884" fill="#56B2DB" />
+                        <rect id="Rectangle 17_2" x="285.636" y="421" width="30.5263" height="7.27249" rx="3" fill="#D9D9D9" />
+                        <ellipse id="Bubble4" cx="291.464" cy="498.76" rx="3.60766" ry="3.35653" fill="white" />
+                        <ellipse id="Bubble3" cx="307.282" cy="493.725" rx="2.77512" ry="2.79711" fill="white" />
+                        <ellipse id="Bubble2" cx="316.718" cy="503.515" rx="2.2201" ry="1.95798" fill="white" />
+                        <ellipse id="Bubble1" cx="298.679" cy="481.138" rx="1.94258" ry="1.95798" fill="white" />
+                    </g>
                 </g>
                 <g id="box-1" onClick={handleClick}>
                     <g id="Group 18">
@@ -207,7 +207,7 @@ function Main({setOpenObject}) {
                     <rect id="Rectangle 98" x="312.7" y="311.419" width="2.13953" height="105.6" transform="rotate(-90 312.7 311.419)" fill="#1F1F1F" />
                     <rect id="Rectangle 99" x="312.7" y="317.302" width="2.13953" height="105.6" transform="rotate(-90 312.7 317.302)" fill="#1F1F1F" />
                 </g>
-                <g id="pc-group" onClick={handleClick}>
+                <g id="pc" onClick={handleClick}>
                     <g id="pc">
                         <rect id="Rectangle 114" x="601" y="398" width="59" height="117.793" fill="#202020" />
                         <rect id="Rectangle 115" x="620.046" y="398" width="39.9544" height="65.0035" fill="#323232" />
