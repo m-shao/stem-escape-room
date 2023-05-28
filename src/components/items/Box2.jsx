@@ -3,7 +3,7 @@ import React from 'react'
 function Box2({inventory}) {
   return (
     <>
-        <g id="Group 3" onClick={() => {inventory.includes("key") && alert("box is open")}}>
+        <g id="Group 3" onClick={() => {inventory.includes("key") && alert("psst... psst... x=24, don't tell anyone ")}}>
             <g id="box">
                 <g id="Group 3">
                     <rect id="Rectangle 46" width="123.352" height="81.0303"

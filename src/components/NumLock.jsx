@@ -11,7 +11,6 @@ function NumLock({setNumLock, setOpen, password}) {
     for (let i = 0; i < array1.length; i++) {
         // Compare each element of array1 with the corresponding element of array2
         if (array1[i] !== array2[i]) {
-            console.log(array1[i], array2[i])
             return false;
         }
     }
