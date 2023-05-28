@@ -35,17 +35,17 @@ function Main({setOpenObject}) {
                         <rect id="Rectangle 5" x="727" y="543" width="61" height="2" fill="#003E86" />
                     </g>
                     <g id="drawer-group-1">
-                        <g id="drawer-3" onClick={handleClick}>
+                        <g id="drawer-3">
                         <rect id="Rectangle 3_2" x="234" y="654" width="131" height="51" fill="white" />
                         <rect id="Rectangle 4_2" x="241.5" y="660.5" width="115" height="38" stroke="#B0B0B0" strokeWidth="3" />
                         <rect id="Rectangle 5_2" x="279" y="678" width="41" height="4" fill="#003E86" />
                         </g>
-                        <g id="drawer-2" onClick={handleClick}>
+                        <g id="drawer-2">
                         <rect id="Rectangle 3_3" x="234" y="597" width="131" height="51" fill="white" />
                         <rect id="Rectangle 4_3" x="241.5" y="603.5" width="115" height="38" stroke="#B0B0B0" strokeWidth="3" />
                         <rect id="Rectangle 5_3" x="279" y="621" width="41" height="4" fill="#003E86" />
                         </g>
-                        <g id="drawer-1" onClick={handleClick}>
+                        <g id="drawer-1">
                         <rect id="Rectangle 3_4" x="234" y="540" width="131" height="51" fill="white" />
                         <rect id="Rectangle 4_4" x="241.5" y="546.5" width="115" height="38" stroke="#B0B0B0" strokeWidth="3" />
                         <rect id="Rectangle 5_4" x="279" y="564" width="41" height="4" fill="#003E86" />
@@ -72,7 +72,7 @@ function Main({setOpenObject}) {
                         </g>
                     </g>
                 </g>
-                <g id="locker-1" onClick={handleClick}>
+                <g id="cupboard-2" onClick={handleClick}>
                     <rect id="Rectangle 3_9" x="-2" y="2" width="68" height="156" transform="matrix(-1 0 0 1 983 544)" fill="white" stroke="#B0B0B0" strokeWidth="4" />
                     <rect id="Rectangle 6_5" width="14" height="4" transform="matrix(0 -1 -1 0 926 636)" fill="#B0B0B0" />
                     <rect id="Rectangle 7" width="3" height="39" transform="matrix(0 -1 -1 0 970 562)" fill="#003E86" />
@@ -227,6 +227,17 @@ function Main({setOpenObject}) {
                         <rect id="Rectangle 124" x="443" y="411" width="152" height="75.1314" fill="#202020" />
                         <rect id="Rectangle 125" x="446.474" y="412.737" width="145.486" height="71.2229" fill="#0B0B0B" />
                     </g>
+                </g>
+            </g>
+            <g id="box-3" onClick={handleClick}>
+                <path id="Rectangle 3_15" d="M1034 500L1072.5 513V543.5L1034 529V500Z" fill="#454545"/>
+                <path id="Rectangle 5_5" d="M1058.5 496L1100 510.5L1072.5 513.5L1034 499.5L1058.5 496Z" fill="#0F0F0F"/>
+                <path id="Rectangle 4_5" d="M1100 510.5L1072 513.261V543.5L1100 539.5V510.5Z" fill="#1D1D1D"/>
+                <path id="Vector 47" d="M1034 506.5L1072 521L1100 519" stroke="black"/>
+                <g id="Group 40">
+                    <path id="Rectangle 3_16" d="M1045 508.121L1054.33 511.273V518.667L1045 515.152V508.121Z" fill="#989898"/>
+                    <path id="Rectangle 5_6" d="M1047.5 508L1056.5 511.152L1054.33 511.394L1045 508H1047.5Z" fill="#B1B1B1"/>
+                    <path id="Rectangle 4_6" d="M1056.5 511.152L1054.21 511.336V518.667L1056.5 518.152V511.152Z" fill="#7A7A7A"/>
                 </g>
             </g>
             <defs>

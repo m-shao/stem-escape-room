@@ -2,7 +2,7 @@ import React from 'react'
 
 function ComponentBackground({children, resetObject}) {
   return (
-    <div className='w-screen h-screen bg-black flex items-center justify-center absolute bg-opacity-75'>
+    <div className='w-screen h-screen bg-black flex items-center justify-center bg-opacity-75 top-0 left-0 fixed'>
         {children}
         <button className="w-16 h-16 text-white absolute left-6 top-6" onClick={resetObject}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-16 h-16">

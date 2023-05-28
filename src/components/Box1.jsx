@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import NumLock from './NumLock'
+import Map from './items/Map'
 
-function Box1() {
+function Box1({inventory, setInventory}) {
     const [numLock, setNumLock] = useState(false)
-
+    const [open, setOpen] = useState(false)
     return (
         <div className='w-screen h-screen flex justify-center items-center'>
-            {numLock && <NumLock setNumLock={setNumLock}/>}
+            {numLock && <NumLock setNumLock={setNumLock} setOpen={setOpen} password={[8,2,4,1]}/>}
             <div className='w-[40vw]'>
-                <svg className='w-full' viewBox="0 0 1288 1222" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={'w-full ' + (open && 'hidden')} viewBox="0 0 1288 1222" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="box-1-page">
                         <g id="box">
                             <rect id="Rectangle 62" width="991.739" height="486.817"
@@ -55,6 +56,21 @@ function Box1() {
                             </g>
                         </g>
                     </g>
+                </svg>
+                <svg className={'w-full ' + (!open ? 'hidden' : "")} viewBox="0 0 1288 1222" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="486.205" height="486.817" transform="matrix(0.868566 -0.495574 2.22925e-08 1 1 247.951)" fill="#111111"/>
+                    <rect width="991.739" height="486.817" transform="matrix(0.868566 0.495574 -2.22925e-08 1 423 13)" fill="#1F1F1F"/>
+                    <rect width="486.205" height="486.817" transform="matrix(0.868566 -0.495574 2.22925e-08 1 861.588 730.226)" fill="#111111"/>
+                    <rect width="32.182" height="489.704" transform="matrix(0.868566 0.495574 -0.868566 0.495574 425.341 0.72406)" fill="#3E3E3E"/>
+                    <rect width="32.182" height="489.704" transform="matrix(0.868566 0.495574 -0.868566 0.495574 1259.34 476)" fill="#3E3E3E"/>
+                    <rect width="987.616" height="29.6727" transform="matrix(0.868566 0.495574 -0.868566 0.495574 426.354 0.043457)" fill="#3E3E3E"/>
+                    <rect width="486.205" height="7.34956" transform="matrix(-0.868566 0.495574 2.22925e-08 1 1283.89 612.378)" fill="#141414"/>
+                    <g className={inventory.includes("map-corner-1") ? 'hidden' : ""} id="Group 4" onClick={() => {!inventory.includes("map-corner-1") && setInventory([...inventory, "map-corner-1"])}}>
+                        <Map/>
+                    </g>
+                    <rect width="991.739" height="486.817" transform="matrix(0.868566 0.495574 -2.22925e-08 1 0 243.409)" fill="#1F1F1F"/>
+                    <rect width="991.739" height="7.34956" transform="matrix(0.868566 0.495574 -2.22925e-08 1 0 361.849)" fill="#141414"/>
+                    <rect width="991.739" height="29.6727" transform="matrix(0.868566 0.495574 -0.868566 0.495574 25.7734 228.704)" fill="#3E3E3E"/>
                 </svg>
             </div>
         </div>

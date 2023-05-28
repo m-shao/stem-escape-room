@@ -1,8 +1,15 @@
 import { useState } from 'react'
+import ventAns from '../images/vent-ans.png'
 
-function Vent() {
+function Vent({inventory}) {
 
     const [screwsOpen, setScrewsOpen] = useState([])
+
+    if (screwsOpen.length === 4) {
+        return <div className='w-[40vw]'>
+            <img src={ventAns} alt="" />
+        </div>
+    }
 
     return (
         <div className='w-[40vw]'>
@@ -29,25 +36,25 @@ function Vent() {
                             transform="rotate(-90 102.53 775.674)" fill="#1F1F1F" />
                     </g>
                     <g id="screws">
-                        <g id="screw-1" onClick={() => {setScrewsOpen([...screwsOpen, 1])}} className={(screwsOpen.includes(1) && "transition-all duration-1000 opacity-0")}>
+                        <g id="screw-1" onClick={() => {inventory.includes("screwdriver") && setScrewsOpen([...screwsOpen, 1])}} className={(screwsOpen.includes(1) ? "transition-all duration-1000 opacity-0" : "")}>
                             <circle id="Ellipse 26" cx="52.929" cy="45.873" r="26.9841" fill="#353535" />
                             <rect id="Rectangle 112" x="51.3101" y="30.2222" width="3.2381" height="31.3016" fill="#1F1F1F" />
                             <rect id="Rectangle 113" x="37.2783" y="47.4919" width="3.2381" height="31.3016"
                                 transform="rotate(-90 37.2783 47.4919)" fill="#1F1F1F" />
                         </g>
-                        <g id="screw-2" onClick={() => {setScrewsOpen([...screwsOpen, 2])}} className={(screwsOpen.includes(2) && "transition-all duration-1000 opacity-0")}>
+                        <g id="screw-2" onClick={() => {inventory.includes("screwdriver") && setScrewsOpen([...screwsOpen, 2])}} className={(screwsOpen.includes(2) ? "transition-all duration-1000 opacity-0": "")}>
                             <circle id="Ellipse 26_2" cx="1563.5" cy="45.873" r="26.9841" fill="#353535" />
                             <rect id="Rectangle 112_2" x="1561.88" y="30.2222" width="3.2381" height="31.3016" fill="#1F1F1F" />
                             <rect id="Rectangle 113_2" x="1547.85" y="47.4919" width="3.2381" height="31.3016"
                                 transform="rotate(-90 1547.85 47.4919)" fill="#1F1F1F" />
                         </g>
-                        <g id="screw-3" onClick={() => {setScrewsOpen([...screwsOpen, 3])}} className={(screwsOpen.includes(3) && "transition-all duration-1000 opacity-0")}>
+                        <g id="screw-3" onClick={() => {inventory.includes("screwdriver") && setScrewsOpen([...screwsOpen, 3])}} className={(screwsOpen.includes(3) ? "transition-all duration-1000 opacity-0": "")}>
                             <circle id="Ellipse 26_3" cx="1565.12" cy="877.524" r="26.9841" fill="#353535" />
                             <rect id="Rectangle 112_3" x="1563.5" y="861.873" width="3.2381" height="31.3016" fill="#1F1F1F" />
                             <rect id="Rectangle 113_3" x="1549.47" y="879.143" width="3.2381" height="31.3016"
                                 transform="rotate(-90 1549.47 879.143)" fill="#1F1F1F" />
                         </g>
-                        <g id="screw-4" onClick={() => {setScrewsOpen([...screwsOpen, 4])}} className={(screwsOpen.includes(4) && "transition-all duration-1000 opacity-0")}>
+                        <g id="screw-4" onClick={() => {inventory.includes("screwdriver") && setScrewsOpen([...screwsOpen, 4])}} className={(screwsOpen.includes(4) ? "transition-all duration-1000 opacity-0": "")}>
                             <circle id="Ellipse 26_4" cx="51.3103" cy="878.063" r="26.9841" fill="#353535" />
                             <rect id="Rectangle 112_4" x="49.6909" y="862.413" width="3.2381" height="31.3016" fill="#1F1F1F" />
                             <rect id="Rectangle 113_4" x="35.6592" y="879.683" width="3.2381" height="31.3016"

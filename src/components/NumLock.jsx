@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function NumLock({setNumLock}) {
+function NumLock({setNumLock, setOpen, password}) {
     function compareArrays(array1, array2) {
     // Check if both arrays have the same length
     if (array1.length !== array2.length) {
@@ -20,7 +20,7 @@ function NumLock({setNumLock}) {
     return true;
     }
 
-    const code = [8, 2, 4, 1]
+    const code = [...password]
     const [input, setInput] = useState(code.map(() => 0))
 
     const handleChange = (event, index) => {
@@ -30,10 +30,16 @@ function NumLock({setNumLock}) {
             updatedInput[index] = newValue
             return updatedInput
         })
+
+        
+        
     }
 
     function handleEnter() {
-        compareArrays(input, code) ? alert('You got it!') : alert('Try again!')
+        if (compareArrays(input, code)){
+            setOpen(true) 
+            setNumLock(false)
+        }else alert('Try again!')
     }
 
   return (
@@ -48,7 +54,7 @@ function NumLock({setNumLock}) {
             {input.map((item, index) => (
                 <input
                 key={index}
-                type="text"
+                type="number"
                 maxLength={1}
                 placeholder='0'
                 value={item}
@@ -62,7 +68,7 @@ function NumLock({setNumLock}) {
             className='w-full bg-neutral-800 text-white p-3 rounded-xl'
             onClick={handleEnter}>
             ENTER
-            </button>
+        </button>
     </div>
   )
 }

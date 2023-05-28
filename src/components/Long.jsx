@@ -1,14 +1,24 @@
 import { useState } from 'react'
 
+import ComponentBackground from './ComponentBackground'
+import binary from '../images/binary.png'
+
 import sticky1 from '../images/sticky-1.png'
 import sticky2 from '../images/sticky-2.png'
 import sticky3 from '../images/sticky-3.png'
 
 function Long() {
     const [sticky, setSticky] = useState(0)
+    const [open, setOpen] = useState(false)
 
     return (
         <>
+            {open && (
+                <ComponentBackground resetObject={() => {setOpen(false)}}>
+                    <img src={binary} alt="" />
+                </ComponentBackground>
+            )}
+
             {sticky !== 0 &&
                 <div className='absolute h-screen w-screen flex justify-center items-center top-0 left-0'>
                     <div className='w-64 h-64 relative'>
@@ -46,7 +56,7 @@ function Long() {
                                     transform="matrix(0.866533 0.499119 -0.866533 0.49912 477.87 18)" fill="white" />
                             </g>
                         </g>
-                        <g id="document-1">
+                        <g id="document-1" onClick={() => setOpen(true)}>
                             <rect id="Rectangle 88" x="-2.98023e-08" y="0.5" width="310.562" height="427.463"
                                 transform="matrix(0.866025 0.5 -0.866025 0.5 508.493 205.25)" fill="white" stroke="black" />
                             <path id="Vector 20"
